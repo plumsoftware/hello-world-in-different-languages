@@ -1,5 +1,6 @@
 package ru.plumsoftware
 
+import ru.plumsoftware.hello_world.helloWorldCpp
 import ru.plumsoftware.hello_world.helloWorldKt
 import ru.plumsoftware.hello_world.helloWorldPy
 
@@ -32,7 +33,7 @@ fun main() {
             val helloWorldFromLanguage = when (number) {
                 1 -> helloWorldKt()
                 2 -> helloWorldPy()
-                3 -> ""
+                3 -> helloWorldCpp()
                 else -> {
                     "Неизвестный номер"
                 }

@@ -19,12 +19,19 @@ tasks.test {
 }
 
 //Генерация файлов
-tasks.register<Copy>("packLanguages") {
+tasks.register<Copy>("packPython") {
+    //Python
     from("src/main/kotlin/languages/python")
     into("$buildDir/classes/python/main/ru/plumsoftware/languages")
 }
+tasks.register<Copy>("packCpp") {
+    //Cpp
+    from("src/main/kotlin/languages/cpp")
+    into("$buildDir/classes/cpp/main/ru/plumsoftware/languages")
+}
 tasks.compileKotlin {
-    dependsOn("packLanguages")
+    dependsOn("packPython")
+    dependsOn("packCpp")
 }
 
 kotlin {
