@@ -1,9 +1,6 @@
 package ru.plumsoftware
 
-import ru.plumsoftware.hello_world.helloWorldCpp
-import ru.plumsoftware.hello_world.helloWorldJava
-import ru.plumsoftware.hello_world.helloWorldKt
-import ru.plumsoftware.hello_world.helloWorldPy
+import ru.plumsoftware.hello_world.*
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -15,6 +12,7 @@ fun main() {
             2 - Python Hello World
             3 - C++
             4 - Java
+            5 - JavaScript
         """.trimIndent()
     )
     repeat(20) {
@@ -37,6 +35,7 @@ fun main() {
                 2 -> helloWorldPy()
                 3 -> helloWorldCpp()
                 4 -> helloWorldJava()
+                5 -> helloWorldJs()
                 else -> {
                     "Неизвестный номер"
                 }

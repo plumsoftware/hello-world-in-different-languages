@@ -29,9 +29,16 @@ tasks.register<Copy>("packCpp") {
     from("src/main/kotlin/languages/cpp")
     into("$buildDir/classes/cpp/main/ru/plumsoftware/languages")
 }
+
+tasks.register<Copy>("packJs") {
+    //Js
+    from("src/main/kotlin/languages/javascript")
+    into("$buildDir/classes/javascript/main/ru/plumsoftware/languages")
+}
 tasks.compileKotlin {
     dependsOn("packPython")
     dependsOn("packCpp")
+    dependsOn("packJs")
 }
 
 kotlin {
