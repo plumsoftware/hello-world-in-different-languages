@@ -14,6 +14,7 @@ fun main() {
         print("=")
     }
     println()
+
     while (true) {
         val input = readlnOrNull()
         val number = try {
