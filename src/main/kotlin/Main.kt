@@ -1,5 +1,8 @@
 package ru.plumsoftware
 
+import ru.plumsoftware.hello_world.helloWorldKt
+import ru.plumsoftware.hello_world.helloWorldPy
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -27,6 +30,7 @@ fun main() {
         if (number != null) {
             val helloWorldFromLanguage = when (number) {
                 1 -> helloWorldKt()
+                2 -> helloWorldPy()
                 else -> {
                     "Неизвестный номер"
                 }

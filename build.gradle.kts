@@ -10,12 +10,23 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("stdlib"))
     testImplementation(kotlin("test"))
 }
 
 tasks.test {
     useJUnitPlatform()
 }
+
+//Генерация файлов
+tasks.register<Copy>("packLanguages") {
+    from("src/main/kotlin/languages")
+    into("$buildDir/classes/python/main/ru/plumsoftware/languages")
+}
+tasks.compileKotlin {
+    dependsOn("packLanguages")
+}
+
 kotlin {
     jvmToolchain(19)
 }
