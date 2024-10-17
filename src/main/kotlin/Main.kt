@@ -1,6 +1,7 @@
 package ru.plumsoftware
 
 import ru.plumsoftware.hello_world.helloWorldCpp
+import ru.plumsoftware.hello_world.helloWorldJava
 import ru.plumsoftware.hello_world.helloWorldKt
 import ru.plumsoftware.hello_world.helloWorldPy
 
@@ -13,6 +14,7 @@ fun main() {
             1 - Kotlin Hello World
             2 - Python Hello World
             3 - C++
+            4 - Java
         """.trimIndent()
     )
     repeat(20) {
@@ -34,6 +36,7 @@ fun main() {
                 1 -> helloWorldKt()
                 2 -> helloWorldPy()
                 3 -> helloWorldCpp()
+                4 -> helloWorldJava()
                 else -> {
                     "Неизвестный номер"
                 }
