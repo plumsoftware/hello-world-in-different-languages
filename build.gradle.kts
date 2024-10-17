@@ -20,7 +20,7 @@ tasks.test {
 
 //Генерация файлов
 tasks.register<Copy>("packLanguages") {
-    from("src/main/kotlin/languages")
+    from("src/main/kotlin/languages/python")
     into("$buildDir/classes/python/main/ru/plumsoftware/languages")
 }
 tasks.compileKotlin {

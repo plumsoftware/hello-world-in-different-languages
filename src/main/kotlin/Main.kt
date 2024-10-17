@@ -11,6 +11,7 @@ fun main() {
             Введите число от 1 до 2. 
             1 - Kotlin Hello World
             2 - Python Hello World
+            3 - C++
         """.trimIndent()
     )
     repeat(20) {
@@ -31,6 +32,7 @@ fun main() {
             val helloWorldFromLanguage = when (number) {
                 1 -> helloWorldKt()
                 2 -> helloWorldPy()
+                3 -> ""
                 else -> {
                     "Неизвестный номер"
                 }
